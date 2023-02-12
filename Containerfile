@@ -1,6 +1,6 @@
-ARG VERSION=22.04
+ARG VERSION=latest
 
-FROM docker.io/ubuntu:${VERSION}
+FROM docker.io/library/ubuntu:${VERSION}
 
 RUN apt-get update -y && \
 apt-get install wget gpg -y && \
