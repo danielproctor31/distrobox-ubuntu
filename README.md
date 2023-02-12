@@ -13,10 +13,20 @@ Update with:
 distrobox upgrade ubuntu
 ```
 
-Application shortcuts can be exported to the host using:
+Application shortcuts can be exported to the host using `distrobox-export`.
 
+Example using VSCode:
 ```
-distrobox-export --app {appName}
+distrobox-export --app code
+```
+
+To run software installed on the host, use [distrbox-host-exec](https://github.com/89luca89/distrobox/blob/main/docs/usage/distrobox-host-exec.md)
+
+example:
+```
+ln -s /usr/bin/distrobox-host-exec /usr/local/bin/podman
+ln -s /usr/bin/distrobox-host-exec /usr/local/bin/docker
+ln -s /usr/bin/distrobox-host-exec /usr/local/bin/flatpak
 ```
 
 ## Private Repo Auth
