@@ -1,5 +1,6 @@
-name: Build and Publish
+name: distrobox-ubuntu
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -20,11 +21,11 @@ jobs:
     runs-on: ubuntu-22.04
     strategy:
       fail-fast: false
-    steps:
-      # Checkout push-to-registry action github repository
+    steps: 
+      # Checkout push-to-registry action GitHub repository
       - name: Checkout Push to Registry action
         uses: actions/checkout@v2
-
+  
       # Build image using Buildah action
       - name: Build Image
         id: build_image
@@ -48,7 +49,7 @@ jobs:
           password: ${{ env.REGISTRY_PASSWORD }}
           extra-args: |
             --disable-content-trust
-
+          
       - name: Echo outputs
         run: |
           echo "${{ toJSON(steps.push.outputs) }}"
