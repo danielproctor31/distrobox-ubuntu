@@ -1,4 +1,4 @@
-name: distrobox-ubuntu
+name: Build and Publish
 on:
   push:
     branches:
@@ -7,6 +7,13 @@ on:
       - '**/README.md'
   schedule:
     - cron: '0 0 * * *'  # midnight
+env:
+  IMAGE_NAME: distrobox-ubuntu
+  IMAGE_TAGS: latest ${{ github.sha }}
+  IMAGE_REGISTRY: ghcr.io/${{ github.repository_owner }}
+  REGISTRY_USER: ${{ github.actor }}
+  REGISTRY_PASSWORD: ${{ github.token }}
+
 jobs:
   push-ghcr:
     name: Build and push image
