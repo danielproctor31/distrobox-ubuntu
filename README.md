@@ -31,6 +31,13 @@ sudo ln -s /usr/bin/distrobox-host-exec /usr/local/bin/flatpak
 sudo ln -s /usr/bin/distrobox-host-exec /usr/local/bin/rpm-ostree
 ```
 
+## Verification
+This image is signed with [sisgstore's cosign](https://docs.sigstore.dev/cosign/overview/). You can verify the signature by downloading the cosign.pub key from this repo and running the following command:
+
+```
+cosign verify --key cosign.pub ghcr.io/danielproctor31/distrobox-ubuntu
+```
+
 ## Private Repo Auth
 If you are building images using a private repo, authentication is required.
 
