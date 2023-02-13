@@ -1,4 +1,4 @@
-ARG VERSION=latest
+ARG VERSION=jammy
 
 FROM docker.io/library/ubuntu:${VERSION}
 
