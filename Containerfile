@@ -10,4 +10,4 @@ wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > pa
     rm -f packages.microsoft.gpg
 
 RUN apt-get update -y && \
-    apt-get install -y apt-transport-https code zsh stow
+    apt-get install -y apt-transport-https code zsh stow git
