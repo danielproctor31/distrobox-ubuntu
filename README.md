@@ -1,6 +1,6 @@
 # ubuntu-image
 
-Can be used with [Distrobox](https://github.com/89luca89/distrobox), [WSL](https://learn.microsoft.com/en-us/windows/wsl/). Or as a base for any other Docker image.
+Can be used with [Distrobox](https://github.com/89luca89/distrobox), [WSL](https://learn.microsoft.com/en-us/windows/wsl/). Or as a base for any other container image.
 
 # Usage
 
