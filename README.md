@@ -29,6 +29,7 @@ example:
 sudo ln -s /usr/bin/distrobox-host-exec /usr/local/bin/podman
 sudo ln -s /usr/bin/distrobox-host-exec /usr/local/bin/podman-compose
 sudo ln -s /usr/bin/distrobox-host-exec /usr/local/bin/docker
+sudo ln -s /usr/bin/distrobox-host-exec /usr/local/bin/docker-compose
 sudo ln -s /usr/bin/distrobox-host-exec /usr/local/bin/flatpak
 sudo ln -s /usr/bin/distrobox-host-exec /usr/local/bin/rpm-ostree
 ```
