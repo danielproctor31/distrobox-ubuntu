@@ -2,5 +2,18 @@ ARG VERSION=jammy
 
 FROM docker.io/library/ubuntu:${VERSION}
 
+COPY files/tmp /tmp
+
+# install packages
 RUN apt-get update -y && \
-    apt-get install -y zsh stow git vim nano software-properties-common
+    apt-get upgrade -y && \
+    grep -v '^#' /tmp/packages | xargs apt-get install -y && \
+    apt-get autoremove -y  && \
+    apt-get clean -y
+
+# setup host-exec
+RUN chmod u+x /tmp/host-exec.sh
+RUN /tmp/host-exec.sh
+
+# cleanup
+RUN rm -rf /tmp/*
