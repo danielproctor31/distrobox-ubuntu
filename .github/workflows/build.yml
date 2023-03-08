@@ -5,9 +5,7 @@ on:
     branches:
       - main
     paths-ignore:
-      - '**/README.md'
-  schedule:
-    - cron: '0 0 * * *'  # midnight
+      - '**/README.md'    
 env:
   IMAGE_NAME: ubuntu
   IMAGE_TAGS: latest ${{ github.sha }}
