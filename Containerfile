@@ -2,6 +2,13 @@ ARG VERSION=jammy
 
 FROM docker.io/library/ubuntu:${VERSION}
 
+LABEL com.github.containers.toolbox="true" \
+      name="ubuntu" \
+      version="jammy" \
+      usage="For use with distrobox" \
+      summary="Customized image for Ubuntu in Distrobox" \
+      maintainer="dan@danielproctor.dev"
+
 COPY files/tmp /tmp
 
 # install packages
