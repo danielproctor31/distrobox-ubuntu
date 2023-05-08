@@ -4,3 +4,4 @@ git
 vim
 nano
 software-properties-common
+build-essential
