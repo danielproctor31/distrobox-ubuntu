@@ -3,7 +3,6 @@ stow
 git
 vim
 nano
-procps
 curl
 file
 software-properties-common
