@@ -17,9 +17,9 @@ distrobox upgrade ubuntu
 
 Application shortcuts can be exported to the host using `distrobox-export`.
 
-Example using VSCode:
+Example:
 ```
-distrobox-export --app code
+distrobox-export --app <package_name>
 ```
 
 Packages can be added/removed by updating the file `files/tmp/packages`.
